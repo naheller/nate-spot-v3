@@ -1,0 +1,108 @@
+@import "./root.css";
+
+body {
+    width: 100%;
+    max-width: 55ch;
+    margin: auto;
+    padding: 1em;
+    font-size: 18px;
+    color: light-dark(var(--stone-1), var(--zinc-9));
+    background-color: light-dark(var(--stone-9), var(--zinc-2));
+}
+
+#site-title {
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: light-dark(var(--stone-1), var(--zinc-9));
+    margin: 0.5em 0;
+}
+
+#site-title:hover {
+    color: light-dark(var(--accent-light), var(--accent-dark));
+    text-decoration: none;
+}
+
+nav a:not(:last-child) {
+    margin-right: 0.5em;
+}
+
+main {
+    margin: 2em 0;
+}
+
+a {
+    color: light-dark(var(--accent-light), var(--accent-dark));
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+time {
+    display: block;
+    font-family: var(--mono);
+    margin: 1em 0;
+}
+
+pre {
+    overflow-x: auto;
+    padding: 1em;
+}
+
+pre,
+code {
+    color: light-dark(var(--stone-9), var(--zinc-9));
+    background-color: light-dark(var(--stone-3), var(--zinc-1));
+}
+
+blockquote {
+    font-style: italic;
+}
+
+p,
+li,
+pre,
+blockquote {
+    line-height: 1.6em;
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+figure figcaption {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.post-list ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.post-list a {
+    word-spacing: -0.1em;
+}
+
+.post-list .post-date {
+    display: inline-block;
+    margin-right: 0.5em;
+    font-family: var(--mono);
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    #site-title {
+        margin-top: 0;
+    }
+}

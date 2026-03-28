@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        $if(title)$
+        <title>$title$ - nate.spot</title>
+        $else$
+        <title>nate.spot</title>
+        $endif$
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/normalize.css" />
+        <link rel="stylesheet" href="/styles/styles.css" />
+    </head>
+    <body>
+        $for(include-before)$ $include-before$ $endfor$
+        <main>
+            $if(title)$
+            <h1>$title$</h1>
+            $endif$ $if(date)$
+            <time datetime="$date$">$date$</time>
+            $endif$ $body$
+        </main>
+        $for(include-after)$ $include-after$ $endfor$
+    </body>
+</html>
