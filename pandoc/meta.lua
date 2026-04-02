@@ -38,7 +38,7 @@ function Link(el)
         el.content = pandoc.utils.stringify(el.content) .. "\u{2197}\u{fe0e}"
     else
         -- If link target is missing file extension, it's already a slug and can be skipped
-        if not string.find(el.target, ".md") then
+        if el.target and not string.find(el.target, ".md") then
             return el
         end
 
@@ -68,7 +68,9 @@ function Link(el)
             local target_file, err = io.open(target_file_path, "r")
 
             if err then
-                print("ERROR: ", err)
+                el.target = "#"
+                el.content = { pandoc.Strikeout(el.content) }
+                return el
             end
 
             local file_content = target_file:read("*all")
@@ -79,8 +81,6 @@ function Link(el)
             end
 
             target_file:close()
-            -- else
-            --     print(err)
         end
 
         el.target = target_link_slug
@@ -101,7 +101,7 @@ end
 function get_filename_from_path(path)
     local filename = pandoc.path.filename(path)
     local filename_no_ext = pandoc.path.split_extension(filename)
-    local filename_with_spaces = filename:gsub("%%20", " ")
+    local filename_with_spaces = filename_no_ext:gsub("%%20", " ")
 
     return filename_with_spaces
 end
