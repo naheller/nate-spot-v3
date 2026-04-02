@@ -12,10 +12,11 @@ body {
 
 #site-title {
     display: block;
-    font-size: 1.25em;
-    font-weight: bold;
-    color: light-dark(var(--stone-1), var(--zinc-9));
-    margin: 0.5em 0;
+    width: max-content;
+    font-size: 2em;
+    font-family: var(--logo);
+    color: light-dark(var(--stone-3), var(--zinc-9));
+    margin: 0.25em 0;
 }
 
 #site-title:hover {
@@ -99,7 +100,7 @@ img {
 
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     #site-title {
