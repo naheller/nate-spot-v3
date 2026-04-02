@@ -32,7 +32,7 @@ end
 
 function Link(el)
     -- If external link, open in new window and add arrow symbol
-    -- Else if internal link, use slug from target file
+    -- Else if internal link, use target file's meta.slug or slugify title
     if string.find(el.target, "^http") then
         el.attributes.target = "_blank"
         el.content = pandoc.utils.stringify(el.content) .. "\u{2197}\u{fe0e}"
@@ -87,6 +87,27 @@ function Link(el)
     end
 
     return el
+end
+
+-- Keep track of images so we don't lazy load the first one
+local image_count = 0
+
+function Image(img)
+    -- Capture filename from (relative) image source path
+    local image_filename = img.src:match("([^/\\]+)$")
+
+    -- Prepend /images/ so image can be found within site structure
+    img.src = "/images/" .. image_filename
+
+    image_count = image_count + 1
+
+    if image_count > 1 then
+        -- Enable lazy loading and async decoding
+        img.attributes.loading = "lazy"
+        img.attributes.decoding = "async"
+    end
+
+    return img
 end
 
 function slugify(str)

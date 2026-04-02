@@ -38,5 +38,9 @@
         ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
         monospace;
 
+    --sans-serif:
+        system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji";
+
     --logo: "Permanent Marker";
 }
