@@ -96,7 +96,7 @@ function Image(img)
     -- Capture filename from (relative) image source path
     local image_filename = img.src:match("([^/\\]+)$")
 
-    -- Prepend /images/ so image can be found within site structure
+    -- Prepend /images/ so image can be found within site directory
     img.src = "/images/" .. image_filename
 
     image_count = image_count + 1
