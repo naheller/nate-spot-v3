@@ -53,23 +53,30 @@ function Link(el)
         local target_link_slug = "/" .. slugify(target_link_filename)
 
         local input_file = PANDOC_STATE.input_files[1]
-        local target_link_path_rel = el.target:gsub("%%20", " ")
+        -- local target_link_path_rel = el.target:gsub("%%20", " ")
         local target_file_path
 
+        -- Concatenate content absolute path with link target relative path
+        -- Could be pathed strangely due to absolute + relative, but should resolve
+        -- Ex: $content_dir + /pages/ + /../posts/My%20Post.md
         if string.find(input_file, pages_subdir) then
-            target_file_path = content_dir .. pages_subdir .. target_link_path_rel
+            target_file_path = content_dir .. pages_subdir .. el.target
         elseif string.find(input_file, posts_subdir) then
-            target_file_path = content_dir .. posts_subdir .. target_link_path_rel
+            target_file_path = content_dir .. posts_subdir .. el.target
+        else
+            el = make_empty_link(el)
+            return el
         end
 
         if target_file_path then
+            target_file_path = target_file_path:gsub("%%20", " ") -- Convert %20 to space
             target_file_path = target_file_path:gsub("[/\\]+", "/") -- Remove any double slashes
 
             local target_file, err = io.open(target_file_path, "r")
 
+            -- If cannot find file, show empty link
             if err then
-                el.target = "#"
-                el.content = { pandoc.Strikeout(el.content) }
+                el = make_empty_link(el)
                 return el
             end
 
@@ -125,4 +132,10 @@ function get_filename_from_path(path)
     local filename_with_spaces = filename_no_ext:gsub("%%20", " ")
 
     return filename_with_spaces
+end
+
+function make_empty_link(el)
+    el.target = "#"
+    el.content = { pandoc.Strikeout(el.content) }
+    return el
 end
