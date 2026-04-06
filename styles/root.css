@@ -1,5 +1,36 @@
 @font-face {
     font-display: swap;
+    font-family: "IBM Plex Serif";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/ibm-plex-serif-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "IBM Plex Serif";
+    font-style: italic;
+    font-weight: 400;
+    src: url("fonts/ibm-plex-serif-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "IBM Plex Serif";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/ibm-plex-serif-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "IBM Plex Serif";
+    font-style: italic;
+    font-weight: 700;
+    src: url("fonts/ibm-plex-serif-700-italic.woff2") format("woff2");
+}
+@font-face {
+    font-display: swap;
     font-family: "IBM Plex Mono";
     font-style: normal;
     font-weight: 400;
@@ -32,6 +63,38 @@
 
 @font-face {
     font-display: swap;
+    font-family: "Alegreya Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/alegreya-sans-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Alegreya Sans";
+    font-style: italic;
+    font-weight: 400;
+    src: url("fonts/alegreya-sans-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Alegreya Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/alegreya-sans-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Alegreya Sans";
+    font-style: italic;
+    font-weight: 700;
+    src: url("fonts/alegreya-sans-700-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
     font-family: "Literata";
     font-style: normal;
     font-weight: 400;
@@ -60,6 +123,78 @@
     font-style: italic;
     font-weight: 700;
     src: url("fonts/literata-700-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/pt-serif-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "PT Serif";
+    font-style: italic;
+    font-weight: 400;
+    src: url("fonts/pt-serif-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/pt-serif-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "PT Serif";
+    font-style: italic;
+    font-weight: 700;
+    src: url("fonts/pt-serif-700-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Intel One Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/intel-one-mono-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Crimson Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/crimson-pro-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Crimson Pro";
+    font-style: italic;
+    font-weight: 400;
+    src: url("fonts/crimson-pro-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Crimson Pro";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/crimson-pro-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Crimson Pro";
+    font-style: italic;
+    font-weight: 700;
+    src: url("fonts/crimson-pro-700-italic.woff2") format("woff2");
 }
 
 :root {
@@ -95,6 +230,6 @@
         "Liberation Mono", Menlo, monospace;
 
     --body:
-        "Literata", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji";
+        "IBM Plex Serif", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }

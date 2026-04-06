@@ -129,7 +129,7 @@ find $PAGES_DIR -type f ! -name "*.sync-conflict*" -name "*.md" | while read FIL
         ### COPY TEMP PAGE TO SITE DIR ###
 
         if [[ -z "$PAGE_SLUG" ]]; then
-            PAGE_SLUG = $PAGE_SLUG_FALLBACK
+            PAGE_SLUG=$PAGE_SLUG_FALLBACK
         fi
 
         mkdir "$SITE_DIR/$PAGE_SLUG"

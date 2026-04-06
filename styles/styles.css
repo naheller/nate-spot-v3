@@ -17,6 +17,12 @@ body {
     background-color: light-dark(var(--stone-9), var(--zinc-2));
 }
 
+header {
+    margin-top: 0.5em;
+    font-family: var(--mono);
+    font-style: italic;
+}
+
 #site-title {
     display: block;
     width: max-content;
@@ -29,10 +35,6 @@ body {
     color: light-dark(var(--accent-light), var(--accent-dark));
     background-color: initial;
     text-decoration: none;
-}
-
-header {
-    margin-top: 0.5em;
 }
 
 nav a {
@@ -61,18 +63,28 @@ a:hover {
 
 h1 {
     font-size: 1.65em;
-    line-height: 1.35em;
-    margin-bottom: 0;
 }
 
 h2 {
     font-size: 1.35em;
-    margin-top: 1.25em;
+}
+
+h3 {
+    font-size: 1.15em;
 }
 
 h2,
 h3 {
     margin-top: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--mono);
 }
 
 time {
@@ -129,6 +141,13 @@ img {
     max-width: 100%;
 }
 
+hr {
+    border: none;
+    height: 1px;
+    border-top: 1px solid light-dark(var(--stone-1), var(--zinc-9));
+    background-color: light-dark(var(--stone-1), var(--zinc-9));
+}
+
 .post-list ul {
     list-style-type: none;
     padding-inline-start: 0;
@@ -137,14 +156,13 @@ img {
 .post-list li {
     display: flex;
     align-items: baseline;
+    font-family: var(--mono);
 }
 
 .post-list .post-date {
     display: inline-block;
-    margin-right: 0.75em;
+    margin-right: 1em;
     flex-shrink: 0;
-    font-family: var(--mono);
-    font-size: 0.95em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -154,7 +172,7 @@ img {
 
     pre,
     code {
-        font-size: initial;
+        font-size: 1em;
     }
 
     blockquote {
