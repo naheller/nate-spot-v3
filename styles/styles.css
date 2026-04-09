@@ -16,7 +16,7 @@ body {
     max-width: 60ch;
     margin: auto;
     padding: 1em;
-    font-size: 19px;
+    font-size: 20px;
     font-family: var(--sans);
     color: light-dark(var(--stone-1), var(--zinc-9));
     background-color: light-dark(var(--stone-10), var(--zinc-2));
@@ -109,7 +109,6 @@ pre {
 pre,
 code {
     font-family: var(--mono);
-    font-size: 0.95em;
 }
 
 p code {
@@ -167,7 +166,6 @@ hr {
 
 .post-list .post-date {
     font-family: var(--mono);
-    font-size: 0.95em;
     display: inline-block;
     margin-right: 1em;
     flex-shrink: 0;
@@ -175,7 +173,7 @@ hr {
 
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     blockquote {
