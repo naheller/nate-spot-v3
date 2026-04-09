@@ -5,7 +5,7 @@
 # -o pipefail → fail if any part of a pipeline fails
 set -euo pipefail
 
-echo "-- Starting build --"
+echo "-- Building site --"
 
 ### FUNCTIONS ###
 
@@ -141,4 +141,4 @@ done
 
 rm -rf $TEMP_DIR
 
-echo "-- Finished build --"
+echo "-- Finished building --"
