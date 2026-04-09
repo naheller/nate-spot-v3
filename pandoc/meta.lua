@@ -16,11 +16,11 @@ function Meta(meta)
         local y, m, d = meta_date_string:match("(%d+)-(%d+)-(%d+)")
         local ts = os.time({ year = y, month = m, day = d })
 
-        local formatted = os.date("%b %d", ts)
-        local formatted_w_year = os.date("%b %d, %Y", ts)
+        local formatted_short = os.date("%m/%d", ts)
+        local formatted_long = os.date("%b %d, %Y", ts)
 
-        meta.date = formatted_w_year
-        date_string = formatted
+        meta.date = formatted_long
+        date_string = formatted_short
     end
 
     io.write(slug_string .. "\n")
