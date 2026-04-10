@@ -87,7 +87,7 @@ find $POSTS_DIR -type f ! -name "*.sync-conflict*" -name "*.md" | while read FIL
     ### ADD LINK TO POST LIST ###
 
     # POST_DATE_FORMATTED=$(date -d "$POST_DATE" "+%b %-d")
-    printf "%s\n" "- [$POST_DATE]{.post-date} [$POST_TITLE](/$POST_SLUG)" >> $POST_LIST_MD_TEMP
+    printf "%s\n" "- [$POST_TITLE](/$POST_SLUG) [$POST_DATE]{.post-date} " >> $POST_LIST_MD_TEMP
 done
 
 ### ADD POST LIST TO INDEX ###

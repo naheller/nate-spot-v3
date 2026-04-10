@@ -16,8 +16,8 @@ function Meta(meta)
         local y, m, d = meta_date_string:match("(%d+)-(%d+)-(%d+)")
         local ts = os.time({ year = y, month = m, day = d })
 
-        local formatted_short = os.date("%m/%d", ts)
-        local formatted_long = os.date("%b %d, %Y", ts)
+        local formatted_short = os.date("%b %e", ts)
+        local formatted_long = os.date("%B %e, %Y", ts)
 
         meta.date = formatted_long
         date_string = formatted_short
