@@ -1,37 +1,5 @@
 @font-face {
     font-display: swap;
-    font-family: "IBM Plex Mono";
-    font-style: normal;
-    font-weight: 400;
-    src: url("fonts/ibm-plex-mono-400.woff2") format("woff2");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "IBM Plex Mono";
-    font-style: italic;
-    font-weight: 400;
-    src: url("fonts/ibm-plex-mono-400-italic.woff2") format("woff2");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "IBM Plex Mono";
-    font-style: normal;
-    font-weight: 700;
-    src: url("fonts/ibm-plex-mono-700.woff2") format("woff2");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "IBM Plex Mono";
-    font-style: italic;
-    font-weight: 700;
-    src: url("fonts/ibm-plex-mono-700-italic.woff2") format("woff2");
-}
-
-@font-face {
-    font-display: swap;
     font-family: "Merriweather";
     font-style: normal;
     font-weight: 400;
@@ -60,6 +28,14 @@
     font-style: italic;
     font-weight: 700;
     src: url("fonts/merriweather-700-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "JetBrains Mono";
+    font-style: italic;
+    font-weight: 700;
+    src: url("fonts/jetbrains-mono-400.woff2") format("woff2");
 }
 
 :root {
@@ -92,7 +68,7 @@
     --accent-light: oklch(51.1% 0.096 186.391);
 
     --mono:
-        "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas,
+        "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas,
         "Liberation Mono", Menlo, monospace;
 
     --body:
