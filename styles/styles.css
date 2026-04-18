@@ -60,8 +60,8 @@ main {
 a {
     color: light-dark(var(--stone-1), var(--zinc-9));
     text-decoration: solid underline
-        light-dark(var(--accent-light), var(--accent-dark)) 2px;
-    text-underline-offset: 2px;
+        light-dark(var(--accent-light), var(--accent-dark)) 0.1em;
+    text-underline-offset: 0.2em;
 }
 
 a:hover {
@@ -130,7 +130,7 @@ p,
 li,
 pre,
 blockquote {
-    line-height: 2;
+    line-height: 1.8;
 }
 
 figure {
