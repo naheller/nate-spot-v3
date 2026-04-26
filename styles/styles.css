@@ -46,7 +46,7 @@ nav {
 nav a {
     display: inline-block;
     margin-top: 0.5em;
-    font-size: 0.9em;
+    font-size: 0.95em;
 }
 
 nav a:not(:last-child) {
@@ -130,7 +130,7 @@ p,
 li,
 pre,
 blockquote {
-    line-height: 1.8;
+    line-height: 2;
 }
 
 figure {
