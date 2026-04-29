@@ -16,7 +16,7 @@
             $if(title)$
             <h1>$title$</h1>
             $endif$ $if(date)$
-            <time datetime="$date$">$date$</time>
+            <time datetime="$date$">$date_formatted$</time>
             $endif$ $body$
         </main>
         $for(include-after)$ $include-after$ $endfor$

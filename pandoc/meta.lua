@@ -16,10 +16,11 @@ function Meta(meta)
         local y, m, d = meta_date_string:match("(%d+)-(%d+)-(%d+)")
         local ts = os.time({ year = y, month = m, day = d })
 
-        local formatted_short = os.date("%b %e", ts)
+        -- local formatted_short = os.date("%b %e", ts)
+        local formatted_short = os.date("%b %d", ts)
         local formatted_long = os.date("%B %e, %Y", ts)
 
-        meta.date = formatted_long
+        meta.date_formatted = formatted_long
         date_string = formatted_short
     end
 
@@ -69,7 +70,7 @@ function Link(el)
         end
 
         if target_file_path then
-            target_file_path = target_file_path:gsub("%%20", " ") -- Convert %20 to space
+            target_file_path = target_file_path:gsub("%%20", " ")   -- Convert %20 to space
             target_file_path = target_file_path:gsub("[/\\]+", "/") -- Remove any double slashes
 
             local target_file, err = io.open(target_file_path, "r")

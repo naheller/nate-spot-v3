@@ -68,10 +68,10 @@
     --accent-light: oklch(51.1% 0.096 186.391);
 
     --mono:
-        "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas,
-        "Liberation Mono", Menlo, monospace;
+        ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+        monospace;
 
     --body:
-        "Merriweather", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
-        sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji";
 }
