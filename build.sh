@@ -57,8 +57,14 @@ cp $INDEX_MD $INDEX_MD_TEMP
 
 ### MAKE POSTS ###
 
-find $POSTS_DIR -type f ! -name "*.sync-conflict*" -name "*.md" | while read FILE; do
-    POST_TITLE=$(basename "$FILE" .md)
+# Sort files by date frontmatter so the post index is ordered correctly.
+# TODO: Understand the sed portion a little better.
+find $POSTS_DIR -type f ! -name "*.sync-conflict*" -name "*.md" -print0 | \
+xargs -0 grep -H -m 1 "^date:" | \
+sed 's/\(.*\).md:date: \(.*\)/\2|\1.md/' | \
+sort -r | \
+while IFS="|" read -r _ FILE_PATH; do
+    POST_TITLE=$(basename "$FILE_PATH" .md)
     POST_SLUG_FALLBACK=$(slugify "$POST_TITLE") # Use slugified post title as fallback if no slug provided
     POST_TEMP="$POSTS_DIR_TEMP/$POST_SLUG_FALLBACK.html"
 
@@ -68,7 +74,7 @@ find $POSTS_DIR -type f ! -name "*.sync-conflict*" -name "*.md" | while read FIL
         read -r POST_SLUG;
         read -r POST_DATE;
     } < <(
-        pandoc "$FILE" -o "$POST_TEMP" \
+        pandoc "$FILE_PATH" -o "$POST_TEMP" \
             --metadata title="$POST_TITLE" \
             --template pandoc/base.html \
             --include-before-body pandoc/header.html \
