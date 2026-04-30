@@ -57,6 +57,8 @@ cp $INDEX_MD $INDEX_MD_TEMP
 
 ### MAKE POSTS ###
 
+YEAR=$(date +%Y)
+
 # Sort files by date frontmatter so the post index is ordered correctly.
 # TODO: Understand the sed portion a little better.
 find $POSTS_DIR -type f ! -name "*.sync-conflict*" -name "*.md" -print0 | \
@@ -90,10 +92,21 @@ while IFS="|" read -r _ FILE_PATH; do
     mkdir "$SITE_DIR/$POST_SLUG"
     cat "$POST_TEMP" >> "$SITE_DIR/$POST_SLUG/index.html"
 
+    ### FILL POST LIST ###
+
+    ### INSERT YEAR SEPARATOR ###
+
+    POST_YEAR=$(date -d $POST_DATE +%Y)
+
+    if [[ $POST_YEAR != $YEAR ]]; then
+        printf "\n%s\n\n" "[$POST_YEAR]{.post-year}" >> $POST_LIST_MD_TEMP
+        YEAR=$POST_YEAR
+    fi
+
     ### ADD LINK TO POST LIST ###
 
-    # POST_DATE_FORMATTED=$(date -d "$POST_DATE" "+%b %-d")
-    printf "%s\n" "- [$POST_DATE]{.post-date} [$POST_TITLE](/$POST_SLUG)" >> $POST_LIST_MD_TEMP
+    POST_DATE_FORMATTED=$(date -d $POST_DATE "+%b %d")
+    printf "%s\n" "- [$POST_DATE_FORMATTED]{.post-date} [$POST_TITLE](/$POST_SLUG)" >> $POST_LIST_MD_TEMP
 done
 
 ### ADD POST LIST TO INDEX ###

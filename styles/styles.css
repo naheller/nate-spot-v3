@@ -16,7 +16,7 @@ body {
     max-width: 55ch;
     margin: auto;
     padding: 1em;
-    font-size: 17px;
+    font-size: 18px;
     font-family: var(--body);
     color: light-dark(var(--stone-1), var(--zinc-9));
     background-color: light-dark(var(--stone-10), var(--zinc-2));
@@ -172,5 +172,10 @@ li::marker {
     flex-shrink: 0;
     margin-right: 1em;
     color: light-dark(var(--stone-6), var(--zinc-7));
+    font-family: var(--mono);
+}
+
+.post-year {
+    display: block;
     font-family: var(--mono);
 }
