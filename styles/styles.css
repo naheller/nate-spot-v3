@@ -82,7 +82,6 @@ h3 {
 
 time {
     display: block;
-    /*font-family: var(--mono);*/
     font-style: italic;
     color: light-dark(var(--stone-6), var(--zinc-7));
     margin: 1em 0;
@@ -179,19 +178,11 @@ li::marker {
     margin-right: 1em;
     min-width: 3em;
     color: light-dark(var(--stone-6), var(--zinc-7));
-    /*font-family: var(--mono);*/
     font-style: italic;
 }
 
 .post-year {
     display: block;
-    /*font-family: var(--mono);*/
     font-style: italic;
     color: light-dark(var(--stone-6), var(--zinc-7));
-}
-
-@media (max-width: 700px) {
-    body {
-        font-size: 18px;
-    }
 }
