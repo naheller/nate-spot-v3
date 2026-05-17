@@ -1,41 +1,41 @@
 @font-face {
     font-display: swap;
-    font-family: "Merriweather";
+    font-family: "Crimson Pro";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/merriweather-400.woff2") format("woff2");
+    src: url("fonts/crimson-pro-400.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Merriweather";
+    font-family: "Crimson Pro";
     font-style: italic;
     font-weight: 400;
-    src: url("fonts/merriweather-400-italic.woff2") format("woff2");
+    src: url("fonts/crimson-pro-400-italic.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Merriweather";
+    font-family: "Crimson Pro";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/merriweather-700.woff2") format("woff2");
+    src: url("fonts/crimson-pro-700.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Merriweather";
+    font-family: "Crimson Pro";
     font-style: italic;
     font-weight: 700;
-    src: url("fonts/merriweather-700-italic.woff2") format("woff2");
+    src: url("fonts/crimson-pro-700-italic.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap;
-    font-family: "JetBrains Mono";
+    font-family: "Fira Code";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/jetbrains-mono-400.woff2") format("woff2");
+    src: url("fonts/fira-code-400.woff2") format("woff2");
 }
 
 :root {
@@ -54,7 +54,7 @@
     --stone-2: oklch(21.6% 0.006 56.043);
     --stone-1: oklch(14.7% 0.004 49.25);
 
-    --zinc-9: oklch(92% 0.004 286.32);
+    /*--zinc-9: oklch(92% 0.004 286.32);
     --zinc-8: oklch(87.1% 0.006 286.286);
     --zinc-7: oklch(70.5% 0.015 286.067);
     --zinc-6: oklch(55.2% 0.016 285.938);
@@ -62,16 +62,26 @@
     --zinc-4: oklch(37% 0.013 285.805);
     --zinc-3: oklch(27.4% 0.006 286.033);
     --zinc-2: oklch(21% 0.006 285.885);
-    --zinc-1: oklch(14.1% 0.005 285.823);
+    --zinc-1: oklch(14.1% 0.005 285.823);*/
+
+    --zinc-9: oklch(92.5% 0.005 214.3);
+    --zinc-8: oklch(87.2% 0.007 219.6);
+    --zinc-7: oklch(72.3% 0.014 214.4);
+    --zinc-6: oklch(56% 0.021 213.5);
+    --zinc-5: oklch(45% 0.017 213.2);
+    --zinc-4: oklch(37.8% 0.015 216);
+    --zinc-3: oklch(27.5% 0.011 216.9);
+    --zinc-2: oklch(21.8% 0.008 223.9);
+    --zinc-1: oklch(14.8% 0.004 228.8);
 
     --accent-dark: oklch(83.7% 0.128 66.29);
     --accent-light: oklch(51.1% 0.096 186.391);
 
     --mono:
-        ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
-        monospace;
+        "Fira Code", ui-monospace, SFMono-Regular, Consolas, "Liberation Mono",
+        Menlo, monospace;
 
     --body:
-        system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji";
+        "Crimson Pro", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
