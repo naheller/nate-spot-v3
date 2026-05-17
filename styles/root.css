@@ -67,11 +67,10 @@
     --accent-dark: oklch(83.7% 0.128 66.29);
     --accent-light: oklch(51.1% 0.096 186.391);
 
-    --mono:
-        "Fira Code", ui-monospace, SFMono-Regular, Consolas, "Liberation Mono",
-        Menlo, monospace;
+    --mono: "Fira Code", ui-monospace, monospace;
+    --body: "Crimson Pro", ui-serif, serif;
 
-    --body:
-        "Crimson Pro", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
-        sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    /*--body:
+        system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji";*/
 }

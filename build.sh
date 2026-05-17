@@ -105,7 +105,7 @@ while IFS="|" read -r _ FILE_PATH; do
 
     ### ADD LINK TO POST LIST ###
 
-    POST_DATE_FORMATTED=$(date -d $POST_DATE "+%b %d")
+    POST_DATE_FORMATTED=$(date -d $POST_DATE "+%b %-d")
     printf "%s\n" "- [$POST_DATE_FORMATTED]{.post-date} [$POST_TITLE](/$POST_SLUG)" >> $POST_LIST_MD_TEMP
 done
 

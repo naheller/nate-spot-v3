@@ -16,7 +16,7 @@ body {
     max-width: 55ch;
     margin: auto;
     padding: 1em;
-    font-size: 20px;
+    font-size: 21px;
     font-family: var(--body);
     color: light-dark(var(--stone-1), var(--zinc-9));
     background-color: light-dark(var(--stone-10), var(--zinc-3));
@@ -37,10 +37,6 @@ header {
 
 #site-title:hover {
     color: light-dark(var(--accent-light), var(--accent-dark));
-}
-
-nav {
-    margin-top: 0.25em;
 }
 
 nav a {
